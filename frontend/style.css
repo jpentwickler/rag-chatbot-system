@@ -245,6 +245,30 @@ header h1 {
     color: var(--text-secondary);
 }
 
+/* Clickable source links */
+.source-link {
+    color: #60a5fa;
+    background: rgba(96, 165, 250, 0.15);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    display: inline-block;
+    margin: 0.125rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.source-link:hover {
+    color: #93c5fd;
+    background: rgba(147, 197, 253, 0.25);
+    border-color: rgba(147, 197, 253, 0.5);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(96, 165, 250, 0.2);
+}
+
 /* Markdown formatting styles */
 .message-content h1,
 .message-content h2,
@@ -447,7 +471,8 @@ header h1 {
 
 /* Sidebar Headers */
 .stats-header,
-.suggested-header {
+.suggested-header,
+.new-chat-button {
     font-size: 0.875rem;
     font-weight: 600;
     color: var(--text-secondary);
@@ -463,12 +488,14 @@ header h1 {
 }
 
 .stats-header:focus,
-.suggested-header:focus {
+.suggested-header:focus,
+.new-chat-button:focus {
     color: var(--primary-color);
 }
 
 .stats-header:hover,
-.suggested-header:hover {
+.suggested-header:hover,
+.new-chat-button:hover {
     color: var(--primary-color);
 }
 
@@ -489,6 +516,17 @@ header h1 {
 details[open] .stats-header::before,
 details[open] .suggested-header::before {
     transform: rotate(90deg);
+}
+
+/* New Chat Button Specific Styling */
+.new-chat-button {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0;
+    background: none;
+    border: none;
+    transition: all 0.2s ease;
 }
 
 /* Course Stats in Sidebar */
