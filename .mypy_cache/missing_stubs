@@ -1,0 +1,5 @@
+types-PyYAML
+types-requests
+types-simplejson
+types-tabulate
+types-ujson

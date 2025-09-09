@@ -33,6 +33,28 @@ Access points:
 - Windows users should use Git Bash for commands
 - ChromaDB data stored in `./chroma_db/` (auto-created)
 
+### Code Quality Tools
+
+```bash
+# Format code with black and isort
+uv run python scripts/format.py
+
+# Run linting with flake8
+uv run python scripts/lint.py
+
+# Run type checking with mypy
+uv run python scripts/typecheck.py
+
+# Run all quality checks
+uv run python scripts/quality.py
+
+# Manual tool usage
+uv run black .              # Format code
+uv run isort .              # Sort imports
+uv run flake8 .             # Lint code
+uv run mypy backend/        # Type check
+```
+
 ## Architecture Overview
 
 This is a **Retrieval-Augmented Generation (RAG) system** for course materials with a modular, tool-based architecture.
